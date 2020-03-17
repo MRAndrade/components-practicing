@@ -1,0 +1,47 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #1ae68c;
+}
+
+.container {
+    width: 600px;
+    border-radius: 10px;
+
+    margin: 0 auto;
+    padding: 8px;
+
+    background-color: #171918;
+    color: #fff;
+    font-size: 14px;
+    box-shadow: 0px 0px 7px 0px #171918;
+}
+
+.header {
+    text-align: center;
+    position: relative;
+    padding: 15px 0 8px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.logo{
+    position: absolute;
+    left: 0;
+
+    display: inline-block;
+    background: url('logo.png') no-repeat;
+    background-size: 20px;
+    height: 20px;
+    width: 20px;
+}
+
+.year {
+    color: #5a5b5a;
+    margin: 0;
+}
+
+.listens {
+    color: #1ae68c;
+}
