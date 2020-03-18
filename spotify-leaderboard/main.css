@@ -4,30 +4,38 @@ body {
 }
 
 .container {
-    width: 600px;
+    width: 465px;
     border-radius: 10px;
 
     margin: 0 auto;
-    padding: 8px;
+    padding: 15px;
 
     background-color: #171918;
     color: #fff;
     font-size: 14px;
+    text-shadow: 0px 0px 2px #4e4e4d;
     box-shadow: 0px 0px 7px 0px #171918;
 }
 
+/*HEADER SECTION*/
+
 .header {
-    text-align: center;
     position: relative;
-    padding: 15px 0 8px;
+    padding: 10px 0 8px;
+    
 }
 
 .header h1 {
+    text-align: center;
     margin: 0;
+
+    font-weight: normal;
+    font-size: 16px;
 }
 
 .logo{
     position: absolute;
+    top: 0;
     left: 0;
 
     display: inline-block;
@@ -38,10 +46,80 @@ body {
 }
 
 .year {
+    text-align: center;
     color: #5a5b5a;
+    margin: 0;
+
+    font-size: 10px;
+}
+
+/* LIST SECTION */
+
+.song-list {
+    position: relative;
+
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    counter-reset: my-counter;
+}
+
+.song-item {
+    margin-bottom: 15px;
+    position: relative;
+
+    counter-increment: my-counter;
+}
+
+.song-item:first-child {
+    height: 350px;
+    background: url(top1.jpg);
+    background-position: center;
+    width: calc(100% + 100px);
+    transform: translateX(-50px);
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px 0px #171918;
+}
+
+.song-item::before {
+    content: counter(my-counter);
+
+    position: absolute;
+    left: 8px;
+    bottom: 0;
+    transform: translateY(-50%);
+
+    color: #1ae68c;
+    font-size: 17px;
+    text-shadow: 0px 0px 2px #4e4e4d;
+}
+
+.song-item:first-child::before {
+    z-index: 1;
+    left: calc(50px + 8px);
+    font-weight: bold;
+}
+
+.song-list p {
     margin: 0;
 }
 
 .listens {
     color: #1ae68c;
+    font-size: 10px;
+}
+
+.highlight {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px 0px;
+    background-color: rgba(0,0,0,0.4);
 }
